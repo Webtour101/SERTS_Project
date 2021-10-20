@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+  <packages/>
+  <device Dclock="168000000" Dcore="Cortex-M4" DcoreVersion="r0p1" Dendian="Little-endian" Dfamily="STM32F4 Series" Dfpu="SP_FPU" Dmpu="MPU" Dname="STM32F407VG" DsubFamily="STM32F407" Dvariant="STM32F407VGTx" Dvendor="STMicroelectronics:13" info="ARM , 192 KB RAM, 1 MB ROM" url="https://www.keil.com/dd2/st/stm32f407vgtx">
+    <package info="STMicroelectronics STM32F4 Series Device Support, Drivers and Examples" name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+  </device>
+  <toolchain Tcompiler="ARMCC" Toutput="exe"/>
+  <components>
+    <component Capiversion="1.0.0" Cbundle="STM32F4-Discovery" Cbundleversion="2.15.0" Cclass="Board Support" Cgroup="Buttons" Cvendor="Keil" Cversion="2.0.0" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="MDK/Boards/ST/STM32F4-Discovery/Common/Buttons_F4Discovery.c"/>
+    </component>
+    <component Capiversion="1.0.0" Cbundle="STM32F4-Discovery" Cbundleversion="2.15.0" Cclass="Board Support" Cgroup="LED" Cvendor="Keil" Cversion="2.0.0" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="MDK/Boards/ST/STM32F4-Discovery/Common/LED_F4Discovery.c"/>
+    </component>
+    <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.5.0">
+      <package name="CMSIS" url="http://www.keil.com/pack/" vendor="ARM" version="5.8.0"/>
+      <file category="doc" name="CMSIS/Documentation/Core/html/index.html"/>
+      <file category="include" name="CMSIS/Core/Include/"/>
+      <file category="header" condition="TrustZone" name="CMSIS/Core/Include/tz_context.h"/>
+      <file attr="template" category="sourceC" condition="TZ Secure" name="CMSIS/Core/Template/ARMv8-M/main_s.c" select="Secure mode 'main' module for ARMv8-M" version="1.1.1"/>
+      <file attr="template" category="sourceC" condition="TZ Secure" name="CMSIS/Core/Template/ARMv8-M/tz_context.c" select="RTOS Context Management (TrustZone for ARMv8-M)" version="1.1.1"/>
+    </component>
+    <component Cclass="CMSIS" Cgroup="DSP" Cvariant="Source" Cvendor="ARM" Cversion="1.9.0-dev">
+      <package name="CMSIS" url="http://www.keil.com/pack/" vendor="ARM" version="5.8.0"/>
+      <file category="doc" name="CMSIS/Documentation/DSP/html/index.html"/>
+      <file category="header" name="CMSIS/DSP/Include/arm_math.h"/>
+      <file category="header" name="CMSIS/DSP/Include/arm_math_f16.h"/>
+      <file category="header" name="CMSIS/DSP/Include/arm_common_tables.h"/>
+      <file category="header" name="CMSIS/DSP/Include/arm_common_tables_f16.h"/>
+      <file category="header" name="CMSIS/DSP/Include/arm_const_structs.h"/>
+      <file category="header" name="CMSIS/DSP/Include/arm_const_structs_f16.h"/>
+      <file category="include" name="CMSIS/DSP/PrivateInclude/"/>
+      <file category="include" name="CMSIS/DSP/Include/"/>
+      <file category="source" name="CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/QuaternionMathFunctions/QuaternionMathFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/BayesFunctions/BayesFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/CommonTables/CommonTables.c"/>
+      <file category="source" name="CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/ControllerFunctions/ControllerFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/DistanceFunctions/DistanceFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/FastMathFunctions/FastMathFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/FilteringFunctions/FilteringFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/MatrixFunctions/MatrixFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/SupportFunctions/SupportFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/SVMFunctions/SVMFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/TransformFunctions/TransformFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctions.c"/>
+      <file category="source" name="CMSIS/DSP/Source/BasicMathFunctions/BasicMathFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/ComplexMathFunctions/ComplexMathFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/FilteringFunctions/FilteringFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/CommonTables/CommonTablesF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/TransformFunctions/TransformFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/MatrixFunctions/MatrixFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/InterpolationFunctions/InterpolationFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/StatisticsFunctions/StatisticsFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/SupportFunctions/SupportFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/FastMathFunctions/FastMathFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/DistanceFunctions/DistanceFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/BayesFunctions/BayesFunctionsF16.c"/>
+      <file category="source" name="CMSIS/DSP/Source/SVMFunctions/SVMFunctionsF16.c"/>
+    </component>
+    <component Capiversion="1.0.0" Cclass="CMSIS" Cgroup="RTOS" Csub="Keil RTX" Cvendor="ARM" Cversion="4.82.0">
+      <package name="CMSIS" url="http://www.keil.com/pack/" vendor="ARM" version="5.8.0"/>
+      <file category="doc" name="CMSIS/Documentation/RTOS/html/rtxImplementation.html"/>
+      <file category="header" name="CMSIS/RTOS/RTX/INC/cmsis_os.h"/>
+      <file attr="config" category="source" name="CMSIS/RTOS/RTX/Templates/RTX_Conf_CM.c" version="4.70.1"/>
+      <file attr="template" category="header" name="CMSIS/RTOS/RTX/UserCodeTemplates/osObjects.h" select="CMSIS-RTOS 'main' function"/>
+      <file attr="template" category="source" name="CMSIS/RTOS/RTX/UserCodeTemplates/main.c" select="CMSIS-RTOS 'main' function"/>
+      <file attr="template" category="source" name="CMSIS/RTOS/RTX/UserCodeTemplates/MailQueue.c" select="CMSIS-RTOS Mail Queue"/>
+      <file attr="template" category="source" name="CMSIS/RTOS/RTX/UserCodeTemplates/MemPool.c" select="CMSIS-RTOS Memory Pool"/>
+      <file attr="template" category="source" name="CMSIS/RTOS/RTX/UserCodeTemplates/MsgQueue.c" select="CMSIS-RTOS Message Queue"/>
+      <file attr="template" category="source" name="CMSIS/RTOS/RTX/UserCodeTemplates/Mutex.c" select="CMSIS-RTOS Mutex"/>
+      <file attr="template" category="source" name="CMSIS/RTOS/RTX/UserCodeTemplates/Semaphore.c" select="CMSIS-RTOS Semaphore"/>
+      <file attr="template" category="source" name="CMSIS/RTOS/RTX/UserCodeTemplates/Thread.c" select="CMSIS-RTOS Thread"/>
+      <file attr="template" category="source" name="CMSIS/RTOS/RTX/UserCodeTemplates/Timer.c" select="CMSIS-RTOS Timer"/>
+      <file attr="template" category="source" condition="ARMCC" name="CMSIS/RTOS/RTX/SRC/ARM/SVC_Table.s" select="CMSIS-RTOS User SVC"/>
+      <file category="library" condition="CM4_FP_LE_ARMCC" name="CMSIS/RTOS/RTX/LIB/ARM/RTX_CM4.lib" src="CMSIS/RTOS/RTX/SRC/ARM"/>
+    </component>
+    <component Capiversion="2.1" Cclass="CMSIS Driver" Cgroup="USART" Cvendor="Keil" Cversion="2.13" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="CMSIS/Driver/USART_STM32F4xx.c"/>
+    </component>
+    <component Capiversion="2.0" Cclass="CMSIS Driver" Cgroup="USB Host" Csub="Full-speed" Cvendor="Keil" Cversion="2.21" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="CMSIS/Driver/OTG_FS_STM32F4xx.c"/>
+      <file category="source" deviceDependent="1" name="CMSIS/Driver/USBH_FS_STM32F4xx.c"/>
+    </component>
+    <component Cbundle="ARM Compiler" Cbundleversion="1.6.3" Cclass="Compiler" Cgroup="I/O" Csub="File" Cvariant="File System" Cvendor="Keil" Cversion="1.2.0">
+      <package name="ARM_Compiler" url="http://www.keil.com/pack/" vendor="Keil" version="1.6.3"/>
+      <file category="source" name="Source/retarget_io.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="2.6.3" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="include" deviceDependent="1" name="Drivers/CMSIS/Device/ST/STM32F4xx/Include/"/>
+      <file attr="template" category="source" condition="STM32F40x_41x_ARMCC" deviceDependent="1" name="MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s" select="Flash Option Bytes"/>
+      <file attr="template" category="source" condition="STM32F4_ARMCC" deviceDependent="1" name="MDK/Device/Source/ARM/STM32F4xx_OTP.s" select="Flash One-Time programmable Bytes"/>
+      <file category="header" deviceDependent="1" name="Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"/>
+      <file attr="config" category="source" condition="STM32F407xx_ARMCC" deviceDependent="1" name="Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s" version="2.6.2"/>
+      <file attr="config" category="source" deviceDependent="1" name="Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c" version="2.6.2"/>
+    </component>
+    <component Capiversion="1.0.0" Cclass="Device" Cgroup="STM32Cube Framework" Csub="Classic" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="doc" deviceDependent="1" name="MDK/CubeMX/Documentation/classic.html"/>
+      <file attr="config" category="header" deviceDependent="1" name="CMSIS/Driver/Config/RTE_Device.h" version="2.4.5"/>
+      <file attr="config" category="header" deviceDependent="1" name="MDK/Templates/Inc/stm32f4xx_hal_conf.h" version="1.7.9"/>
+      <file attr="template" category="source" deviceDependent="1" name="MDK/Templates/Src/stm32f4xx_hal_msp.c" select="MCU Specific HAL Initialization / De-Initialization"/>
+      <file attr="template" category="header" deviceDependent="1" name="MDK/Templates/Inc/stm32f4xx_it.h" select="Exception Handlers and Peripheral IRQ"/>
+      <file attr="template" category="source" deviceDependent="1" name="MDK/Templates/Src/stm32f4xx_it.c" select="Exception Handlers and Peripheral IRQ"/>
+      <file attr="template" category="header" deviceDependent="1" name="MDK/Templates/Inc/main.h" select="'main' module for STM32Cube HAL"/>
+      <file attr="template" category="source" deviceDependent="1" name="MDK/Templates/Src/main.c" select="'main' module for STM32Cube HAL"/>
+      <file attr="template" category="header" deviceDependent="1" name="MDK/Templates_LL/Inc/main.h" select="'main' module for STM32Cube LL"/>
+      <file attr="template" category="source" deviceDependent="1" name="MDK/Templates_LL/Src/main.c" select="'main' module for STM32Cube LL"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Common" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="include" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Inc/"/>
+      <file category="header" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="Cortex" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="DMA" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="GPIO" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="I2C" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="I2S" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s.c"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2s_ex.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="PWR" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RCC" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SPI" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c"/>
+    </component>
+    <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="USART" Cvendor="Keil" Cversion="1.7.9" deviceDependent="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="source" deviceDependent="1" name="Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_usart.c"/>
+    </component>
+    <component Cbundle="MDK-Plus" Cbundleversion="7.13.0" Cclass="File System" Cgroup="CORE" Cvariant="LFN" Cvendor="Keil" Cversion="6.14.1">
+      <package name="MDK-Middleware" url="http://www.keil.com/pack/" vendor="Keil" version="7.13.0"/>
+      <file category="header" name="FileSystem/Include/rl_fs.h"/>
+      <file attr="config" category="source" name="FileSystem/Config/FS_Config.c" version="6.3.0"/>
+      <file category="other" name="FileSystem/FileSystem.scvd"/>
+      <file category="library" condition="CM4F_LE_ARMCC" name="FileSystem/Lib/ARM/FS_LFN_CM3_L.lib"/>
+    </component>
+    <component Cbundle="MDK-Plus" Cbundleversion="7.13.0" Cclass="File System" Cgroup="Drive" Csub="USB" Cvendor="Keil" Cversion="6.14.1" maxInstances="2">
+      <package name="MDK-Middleware" url="http://www.keil.com/pack/" vendor="Keil" version="7.13.0"/>
+      <file category="doc" name="Doc/FileSystem/html/fs_create_app.html#usb_usage"/>
+      <file attr="config" category="header" name="FileSystem/Config/FS_Config_USB.h" version="6.2.0"/>
+    </component>
+    <component Cbundle="MDK-Pro" Cbundleversion="7.13.0" Cclass="USB" Cgroup="CORE" Cvariant="Release" Cvendor="Keil" Cversion="6.15.0">
+      <package name="MDK-Middleware" url="http://www.keil.com/pack/" vendor="Keil" version="7.13.0"/>
+      <file category="header" name="USB/Include/rl_usb.h"/>
+      <file category="other" name="USB/USB.scvd"/>
+      <file category="library" condition="CM4F_LE_ARMCC" name="USB/Lib/ARM/USB_CM3_L.lib"/>
+    </component>
+    <component Cbundle="MDK-Pro" Cbundleversion="7.13.0" Cclass="USB" Cgroup="Host" Cvendor="Keil" Cversion="6.15.0" maxInstances="4">
+      <package name="MDK-Middleware" url="http://www.keil.com/pack/" vendor="Keil" version="7.13.0"/>
+      <file category="doc" name="Doc/USB/html/_u_s_b__host.html"/>
+      <file attr="config" category="source" name="USB/Config/USBH_Config.c" version="5.2.1"/>
+    </component>
+    <component Cbundle="MDK-Pro" Cbundleversion="7.13.0" Cclass="USB" Cgroup="Host" Csub="MSC" Cvendor="Keil" Cversion="6.15.0">
+      <package name="MDK-Middleware" url="http://www.keil.com/pack/" vendor="Keil" version="7.13.0"/>
+      <file category="doc" name="Doc/USB/html/_m_s_c.html"/>
+      <file attr="config" category="header" name="USB/Config/USBH_Config_MSC.h" version="5.0.0"/>
+      <file attr="template" category="source" name="USB/Template/USBH_MSC.c" select="USB Host Mass Storage Access"/>
+      <file attr="template" category="source" name="USB/Template/USBH_MSC.h" select="USB Host Mass Storage Access"/>
+    </component>
+  </components>
+  <apis>
+    <api Capiversion="2.3.0" Cclass="CMSIS Driver" Cgroup="USB Host" Cvendor="ARM" Cversion="2.3.0" exclusive="0">
+      <package name="CMSIS" url="http://www.keil.com/pack/" vendor="ARM" version="5.8.0"/>
+      <file category="doc" name="CMSIS/Documentation/Driver/html/group__usbh__interface__gr.html"/>
+      <file category="header" name="CMSIS/Driver/Include/Driver_USBH.h"/>
+    </api>
+    <api Capiversion="1.0.0" Cclass="CMSIS" Cgroup="RTOS" Cvendor="ARM" Cversion="1.0.0" exclusive="1">
+      <package name="CMSIS" url="http://www.keil.com/pack/" vendor="ARM" version="5.8.0"/>
+      <file category="doc" name="CMSIS/Documentation/RTOS/html/index.html"/>
+    </api>
+    <api Capiversion="2.4.0" Cclass="CMSIS Driver" Cgroup="USART" Cvendor="ARM" Cversion="2.4.0" exclusive="0">
+      <package name="CMSIS" url="http://www.keil.com/pack/" vendor="ARM" version="5.8.0"/>
+      <file category="doc" name="CMSIS/Documentation/Driver/html/group__usart__interface__gr.html"/>
+      <file category="header" name="CMSIS/Driver/Include/Driver_USART.h"/>
+    </api>
+    <api Capiversion="1.0.0" Cclass="Board Support" Cgroup="Buttons" Cvendor="Keil" Cversion="1.0.0" exclusive="0">
+      <package name="MDK-Middleware" url="http://www.keil.com/pack/" vendor="Keil" version="7.13.0"/>
+      <file category="header" name="Board/Board_Buttons.h"/>
+      <file category="doc" name="Doc/Board/html/group__bsp__buttons.html"/>
+    </api>
+    <api Capiversion="1.0.0" Cclass="Device" Cgroup="STM32Cube Framework" Cvendor="Keil" Cversion="1.0.0" exclusive="1">
+      <package name="STM32F4xx_DFP" url="http://www.keil.com/pack/" vendor="Keil" version="2.15.0"/>
+      <file category="doc" name="MDK/CubeMX/Documentation/index.html"/>
+    </api>
+    <api Capiversion="1.0.0" Cclass="Board Support" Cgroup="LED" Cvendor="Keil" Cversion="1.0.0" exclusive="0">
+      <package name="MDK-Middleware" url="http://www.keil.com/pack/" vendor="Keil" version="7.13.0"/>
+      <file category="header" name="Board/Board_LED.h"/>
+      <file category="doc" name="Doc/Board/html/group__bsp__led.html"/>
+    </api>
+  </apis>
+</configuration>

@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.settings">
+        		
+        <cconfiguration id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.706890044">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.706890044" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="com.arm.eclipse.builder.armcc.error" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="clean" description="" id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.706890044" name="Debug" parent="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6">
+                    					
+                    <folderInfo id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.706890044." name="/" resourcePath="">
+                        						
+                        <toolChain id="com.arm.toolchain.v6.exe.debug.base.var.arm_compiler_6-6.1354291746" name="Arm Compiler 6" superClass="com.arm.toolchain.v6.exe.debug.base.var.arm_compiler_6-6">
+                            							
+                            <option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.std" id="com.arm.toolchain.v6.base.options.debug.level.499696428" name="Debug Level" superClass="com.arm.toolchain.v6.base.options.debug.level" valueType="enumerated"/>
+                            							
+                            <option id="com.arm.toolchain.v6.base.options.target.cpu_fpu.2107216877" superClass="com.arm.toolchain.v6.base.options.target.cpu_fpu" value="Cortex-M4.FPv4_SP_D16" valueType="string"/>
+                            							
+                            <option id="com.arm.toolchain.v6.base.options.floatabi.797229811" name="Float ABI" superClass="com.arm.toolchain.v6.base.options.floatabi" value="com.arm.tool.c.compiler.v6.base.option.floatabi.hard" valueType="enumerated"/>
+                            							
+                            <option id="com.arm.toolchain.v6.base.options.endian.97297041" name="Byte order" superClass="com.arm.toolchain.v6.base.options.endian" value="com.arm.tool.c.compiler.v6.base.option.endian.little" valueType="enumerated"/>
+                            							
+                            <targetPlatform id="com.arm.eclipse.build.config.v6.exe.debug.base.var.arm_compiler_6-6.706890044..1157559971" name=""/>
+                            							
+                            <builder buildPath="${workspace_loc:/TestCMSISArm6}/Debug" id="com.arm.toolchain.v6.builder.17164447" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.arm.toolchain.v6.builder"/>
+                            							
+                            <tool id="com.arm.tool.c.compiler.v6.base.var.arm_compiler_6-6.1410373704" name="Arm C Compiler 6" superClass="com.arm.tool.c.compiler.v6.base.var.arm_compiler_6-6">
+                                								
+                                <option defaultValue="com.arm.tool.c.compiler.v6.base.option.optlevel.min" id="com.arm.tool.c.compiler.v6.base.option.optlevel.1909550496" name="Optimization level" superClass="com.arm.tool.c.compiler.v6.base.option.optlevel" useByScannerDiscovery="true" valueType="enumerated"/>
+                                								
+                                <option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.std" id="com.arm.tool.c.compiler.v6.base.options.debug.level.1004008288" name="Debug Level" superClass="com.arm.tool.c.compiler.v6.base.options.debug.level" useByScannerDiscovery="true" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.cpu.1170797993" name="CPU (-mcpu)" superClass="com.arm.tool.c.compiler.v6.base.option.cpu" useByScannerDiscovery="true" value="cortex-m4" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.target.1778444241" name="Target (--target)" superClass="com.arm.tool.c.compiler.v6.base.option.target" useByScannerDiscovery="true" value="arm-arm-none-eabi" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.fpu.404339513" name="FPU (-mfpu)" superClass="com.arm.tool.c.compiler.v6.base.option.fpu" useByScannerDiscovery="true" value="fpv4-sp-d16" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.floatabi.488961058" name="Float ABI (-mfloat-abi)" superClass="com.arm.tool.c.compiler.v6.base.option.floatabi" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.floatabi.hard" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.endian.1311639471" name="Byte order" superClass="com.arm.tool.c.compiler.v6.base.option.endian" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.endian.little" valueType="enumerated"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.compiler.v6.base.option.implicit.defmac.719110677" name="Implicit Define macros" superClass="com.arm.tool.c.compiler.v6.base.option.implicit.defmac" useByScannerDiscovery="true" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="_RTE_"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="STM32F407xx"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.compiler.v6.base.option.implicit.incpath.53654615" name="Implicit Include paths" superClass="com.arm.tool.c.compiler.v6.base.option.implicit.incpath" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Core/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/PrivateInclude&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Driver/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/INC&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/SRC/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/UserCodeTemplates&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/Board&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/FileSystem/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/USB/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Device/Source/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates_LL/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/Device/STM32F407VGTx&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/File_System&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/USB&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.lang.1076146898" name="Source language mode" superClass="com.arm.tool.c.compiler.v6.base.option.lang" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.lang.c99" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.shortEnumsWchar.838473984" name="Short enums/wchar (-fshort-enums -fshort-wchar)" superClass="com.arm.tool.c.compiler.v6.base.option.shortEnumsWchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.compiler.v6.base.option.defmac.1856015480" name="Define macro (-D)" superClass="com.arm.tool.c.compiler.v6.base.option.defmac" useByScannerDiscovery="false" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="HSE_VALUE=&quot;8000000&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="USE_HAL_DRIVER"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="STM32F407xx"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="USE_STM32F4_DISCO"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="ARM_MATH_CM4"/>
+                                    								
+                                </option>
+                                								
+                                <inputType id="com.arm.tool.c.compiler.v6.base.input.15506976" superClass="com.arm.tool.c.compiler.v6.base.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.arm.tool.cpp.compiler.v6.base.var.arm_compiler_6-6.2090061895" name="Arm C++ Compiler 6" superClass="com.arm.tool.cpp.compiler.v6.base.var.arm_compiler_6-6">
+                                								
+                                <option defaultValue="com.arm.tool.c.compiler.v6.base.option.optlevel.min" id="com.arm.tool.c.compiler.v6.base.option.optlevel.410367156" name="Optimization level" superClass="com.arm.tool.c.compiler.v6.base.option.optlevel" useByScannerDiscovery="true" valueType="enumerated"/>
+                                								
+                                <option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.std" id="com.arm.tool.c.compiler.v6.base.options.debug.level.1076739486" name="Debug Level" superClass="com.arm.tool.c.compiler.v6.base.options.debug.level" useByScannerDiscovery="true" valueType="enumerated"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.compiler.v6.base.option.implicit.defmac.1243738458" name="Implicit Define macros" superClass="com.arm.tool.c.compiler.v6.base.option.implicit.defmac" useByScannerDiscovery="true" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="_RTE_"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="STM32F407xx"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.compiler.v6.base.option.implicit.incpath.210001096" name="Implicit Include paths" superClass="com.arm.tool.c.compiler.v6.base.option.implicit.incpath" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Core/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/PrivateInclude&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Driver/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/INC&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/SRC/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/UserCodeTemplates&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/Board&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/FileSystem/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/USB/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Device/Source/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates_LL/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/Device/STM32F407VGTx&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/File_System&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/USB&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.shortEnumsWchar.1891050340" name="Short enums/wchar (-fshort-enums -fshort-wchar)" superClass="com.arm.tool.c.compiler.v6.base.option.shortEnumsWchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.arm.tool.assembler.v6.base.var.arm_compiler_6-6.791796554" name="Arm Assembler 6" superClass="com.arm.tool.assembler.v6.base.var.arm_compiler_6-6">
+                                								
+                                <option defaultValue="com.arm.tool.assembler.v6.base.options.debug.level.std" id="com.arm.tool.assembler.v6.base.options.debug.level.878563213" name="Debug Level" superClass="com.arm.tool.assembler.v6.base.options.debug.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.cpu.607244594" name="CPU (-mcpu)" superClass="com.arm.tool.assembler.v6.base.option.cpu" useByScannerDiscovery="false" value="cortex-m4" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.target.879298589" name="Target (--target)" superClass="com.arm.tool.assembler.v6.base.option.target" useByScannerDiscovery="false" value="arm-arm-none-eabi" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.fpu.291759332" name="FPU (-mfpu)" superClass="com.arm.tool.assembler.v6.base.option.fpu" useByScannerDiscovery="true" value="fpv4-sp-d16" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.floatabi.1476420244" name="Float ABI (-mfloat-abi)" superClass="com.arm.tool.assembler.v6.base.option.floatabi" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.floatabi.hard" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.endian.1652052857" name="Byte order" superClass="com.arm.tool.assembler.v6.base.option.endian" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.endian.little" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.force.preproc.1320127623" name="Preprocess input files (-x assembler-with-cpp)" superClass="com.arm.tool.assembler.v6.base.option.force.preproc" value="true" valueType="boolean"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.assembler.v6.base.option.implicit.defmac.1374718903" name="Implicit Define macros" superClass="com.arm.tool.assembler.v6.base.option.implicit.defmac" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="_RTE_"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="STM32F407xx"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.assembler.v6.base.option.implicit.incpath.1123933471" name="Implicit Include paths" superClass="com.arm.tool.assembler.v6.base.option.implicit.incpath" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Core/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/PrivateInclude&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Driver/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/INC&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/SRC/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/UserCodeTemplates&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/Board&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/FileSystem/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/USB/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Device/Source/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates_LL/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/Device/STM32F407VGTx&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/File_System&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/USB&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.masm.579017808" name="Assembler syntax (-masm)" superClass="com.arm.tool.assembler.v6.base.option.masm" value="masm.val.auto" valueType="enumerated"/>
+                                								
+                                <inputType id="com.arm.tool.assembler.v6.base.input.2085061719" superClass="com.arm.tool.assembler.v6.base.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.arm.tool.c.linker.v6.base.var.arm_compiler_6-6.910083077" name="Arm Linker 6" superClass="com.arm.tool.c.linker.v6.base.var.arm_compiler_6-6">
+                                								
+                                <option id="com.arm.tool.c.linker.option.entry.1321985213" name="Image entry point (--entry)" superClass="com.arm.tool.c.linker.option.entry" value="Reset_Handler" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.c.linker.option.scatter.530699035" name="Scatter file (--scatter)" superClass="com.arm.tool.c.linker.option.scatter" value="${workspace_loc:/${ProjName}}/cmsis_rte_STM32F407VGTx.sct" valueType="string"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.linker.implicit.libs.1039048974" name="Implicit other library files" superClass="com.arm.tool.c.linker.implicit.libs" valueType="libs">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/LIB/ARM/RTX_CM4.lib&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/FileSystem/Lib/ARM/FS_LFN_CM3_L.lib&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/USB/Lib/ARM/USB_CM3_L.lib&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.linker.libs.1233309382" name="User library files" superClass="com.arm.tool.c.linker.libs" useByScannerDiscovery="false" valueType="libs">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/src/libPDMFilter_CM4_Keil.lib&quot;"/>
+                                    								
+                                </option>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.arm.tool.librarian.v6.base.var.arm_compiler_6-6.10776893" name="Arm Librarian 6" superClass="com.arm.tool.librarian.v6.base.var.arm_compiler_6-6"/>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    					
+                    <sourceEntries>
+                        						
+                        <entry excluding="src/Thread_2.c|src/Thread_1.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        					
+                    </sourceEntries>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        		
+        <cconfiguration id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1025507332">
+            			
+            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1025507332" moduleId="org.eclipse.cdt.core.settings" name="Release">
+                				
+                <externalSettings/>
+                				
+                <extensions>
+                    					
+                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="com.arm.eclipse.builder.armcc.error" point="org.eclipse.cdt.core.ErrorParser"/>
+                    					
+                    <extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+                    				
+                </extensions>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+                				
+                <configuration artifactExtension="axf" artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="clean" description="" id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1025507332" name="Release" parent="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6">
+                    					
+                    <folderInfo id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1025507332." name="/" resourcePath="">
+                        						
+                        <toolChain id="com.arm.toolchain.v6.exe.release.base.var.arm_compiler_6-6.914183362" name="Arm Compiler 6" superClass="com.arm.toolchain.v6.exe.release.base.var.arm_compiler_6-6">
+                            							
+                            <option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.none" id="com.arm.toolchain.v6.base.options.debug.level.719236945" name="Debug Level" superClass="com.arm.toolchain.v6.base.options.debug.level" valueType="enumerated"/>
+                            							
+                            <option id="com.arm.toolchain.v6.base.options.target.cpu_fpu.1165367550" superClass="com.arm.toolchain.v6.base.options.target.cpu_fpu" value="Cortex-M4.FPv4_SP_D16" valueType="string"/>
+                            							
+                            <option id="com.arm.toolchain.v6.base.options.floatabi.1984992313" name="Float ABI" superClass="com.arm.toolchain.v6.base.options.floatabi" value="com.arm.tool.c.compiler.v6.base.option.floatabi.hard" valueType="enumerated"/>
+                            							
+                            <option id="com.arm.toolchain.v6.base.options.endian.1415772509" name="Byte order" superClass="com.arm.toolchain.v6.base.options.endian" value="com.arm.tool.c.compiler.v6.base.option.endian.little" valueType="enumerated"/>
+                            							
+                            <targetPlatform id="com.arm.eclipse.build.config.v6.exe.release.base.var.arm_compiler_6-6.1025507332..296582475" name=""/>
+                            							
+                            <builder buildPath="${workspace_loc:/TestCMSISArm6}/Release" id="com.arm.toolchain.v6.builder.1340897255" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="com.arm.toolchain.v6.builder"/>
+                            							
+                            <tool id="com.arm.tool.c.compiler.v6.base.var.arm_compiler_6-6.576359380" name="Arm C Compiler 6" superClass="com.arm.tool.c.compiler.v6.base.var.arm_compiler_6-6">
+                                								
+                                <option defaultValue="com.arm.tool.c.compiler.v6.base.option.optlevel.high" id="com.arm.tool.c.compiler.v6.base.option.optlevel.1701054227" name="Optimization level" superClass="com.arm.tool.c.compiler.v6.base.option.optlevel" useByScannerDiscovery="true" valueType="enumerated"/>
+                                								
+                                <option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.none" id="com.arm.tool.c.compiler.v6.base.options.debug.level.37507039" name="Debug Level" superClass="com.arm.tool.c.compiler.v6.base.options.debug.level" useByScannerDiscovery="true" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.cpu.1498169405" name="CPU (-mcpu)" superClass="com.arm.tool.c.compiler.v6.base.option.cpu" useByScannerDiscovery="true" value="cortex-m4" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.target.1500162738" name="Target (--target)" superClass="com.arm.tool.c.compiler.v6.base.option.target" useByScannerDiscovery="true" value="arm-arm-none-eabi" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.fpu.1467574726" name="FPU (-mfpu)" superClass="com.arm.tool.c.compiler.v6.base.option.fpu" useByScannerDiscovery="true" value="fpv4-sp-d16" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.floatabi.1544454440" name="Float ABI (-mfloat-abi)" superClass="com.arm.tool.c.compiler.v6.base.option.floatabi" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.floatabi.hard" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.endian.1826694205" name="Byte order" superClass="com.arm.tool.c.compiler.v6.base.option.endian" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.endian.little" valueType="enumerated"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.compiler.v6.base.option.implicit.defmac.521678399" name="Implicit Define macros" superClass="com.arm.tool.c.compiler.v6.base.option.implicit.defmac" useByScannerDiscovery="true" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="_RTE_"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="STM32F407xx"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.compiler.v6.base.option.implicit.incpath.1788614679" name="Implicit Include paths" superClass="com.arm.tool.c.compiler.v6.base.option.implicit.incpath" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Core/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/PrivateInclude&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Driver/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/INC&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/SRC/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/UserCodeTemplates&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/Board&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/FileSystem/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/USB/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Device/Source/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates_LL/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/Device/STM32F407VGTx&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/File_System&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/USB&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.lang.1658955191" name="Source language mode" superClass="com.arm.tool.c.compiler.v6.base.option.lang" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.lang.c99" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.shortEnumsWchar.571095929" name="Short enums/wchar (-fshort-enums -fshort-wchar)" superClass="com.arm.tool.c.compiler.v6.base.option.shortEnumsWchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+                                								
+                                <inputType id="com.arm.tool.c.compiler.v6.base.input.1664187706" superClass="com.arm.tool.c.compiler.v6.base.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.arm.tool.cpp.compiler.v6.base.var.arm_compiler_6-6.1283231829" name="Arm C++ Compiler 6" superClass="com.arm.tool.cpp.compiler.v6.base.var.arm_compiler_6-6">
+                                								
+                                <option defaultValue="com.arm.tool.c.compiler.v6.base.option.optlevel.high" id="com.arm.tool.c.compiler.v6.base.option.optlevel.693963113" name="Optimization level" superClass="com.arm.tool.c.compiler.v6.base.option.optlevel" useByScannerDiscovery="true" valueType="enumerated"/>
+                                								
+                                <option defaultValue="com.arm.tool.c.compiler.v6.base.options.debug.level.none" id="com.arm.tool.c.compiler.v6.base.options.debug.level.972042852" name="Debug Level" superClass="com.arm.tool.c.compiler.v6.base.options.debug.level" useByScannerDiscovery="true" valueType="enumerated"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.compiler.v6.base.option.implicit.defmac.1176581433" name="Implicit Define macros" superClass="com.arm.tool.c.compiler.v6.base.option.implicit.defmac" useByScannerDiscovery="true" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="_RTE_"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="STM32F407xx"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.compiler.v6.base.option.implicit.incpath.1687132136" name="Implicit Include paths" superClass="com.arm.tool.c.compiler.v6.base.option.implicit.incpath" useByScannerDiscovery="false" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Core/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/PrivateInclude&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Driver/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/INC&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/SRC/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/UserCodeTemplates&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/Board&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/FileSystem/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/USB/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Device/Source/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates_LL/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/Device/STM32F407VGTx&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/File_System&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/USB&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option id="com.arm.tool.c.compiler.v6.base.option.shortEnumsWchar.1699941931" name="Short enums/wchar (-fshort-enums -fshort-wchar)" superClass="com.arm.tool.c.compiler.v6.base.option.shortEnumsWchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.arm.tool.assembler.v6.base.var.arm_compiler_6-6.591123986" name="Arm Assembler 6" superClass="com.arm.tool.assembler.v6.base.var.arm_compiler_6-6">
+                                								
+                                <option defaultValue="com.arm.tool.assembler.v6.base.options.debug.level.none" id="com.arm.tool.assembler.v6.base.options.debug.level.791711001" name="Debug Level" superClass="com.arm.tool.assembler.v6.base.options.debug.level" useByScannerDiscovery="false" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.cpu.724868828" name="CPU (-mcpu)" superClass="com.arm.tool.assembler.v6.base.option.cpu" useByScannerDiscovery="false" value="cortex-m4" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.target.1394193534" name="Target (--target)" superClass="com.arm.tool.assembler.v6.base.option.target" useByScannerDiscovery="false" value="arm-arm-none-eabi" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.fpu.189670776" name="FPU (-mfpu)" superClass="com.arm.tool.assembler.v6.base.option.fpu" useByScannerDiscovery="true" value="fpv4-sp-d16" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.floatabi.443601272" name="Float ABI (-mfloat-abi)" superClass="com.arm.tool.assembler.v6.base.option.floatabi" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.floatabi.hard" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.endian.796432179" name="Byte order" superClass="com.arm.tool.assembler.v6.base.option.endian" useByScannerDiscovery="true" value="com.arm.tool.c.compiler.v6.base.option.endian.little" valueType="enumerated"/>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.force.preproc.1484316439" name="Preprocess input files (-x assembler-with-cpp)" superClass="com.arm.tool.assembler.v6.base.option.force.preproc" value="true" valueType="boolean"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.assembler.v6.base.option.implicit.defmac.1357111040" name="Implicit Define macros" superClass="com.arm.tool.assembler.v6.base.option.implicit.defmac" valueType="definedSymbols">
+                                    									
+                                    <listOptionValue builtIn="false" value="_RTE_"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="STM32F407xx"/>
+                                    								
+                                </option>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.assembler.v6.base.option.implicit.incpath.1214197720" name="Implicit Include paths" superClass="com.arm.tool.assembler.v6.base.option.implicit.incpath" valueType="includePath">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Core/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/DSP/PrivateInclude&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/Driver/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/INC&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/SRC/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/UserCodeTemplates&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/Board&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/FileSystem/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/USB/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/Drivers/STM32F4xx_HAL_Driver/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Device/Source/ARM&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/STM32F4xx_DFP/2.15.0/MDK/Templates_LL/Inc&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/Device/STM32F407VGTx&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/File_System&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE/USB&quot;"/>
+                                    								
+                                </option>
+                                								
+                                <option id="com.arm.tool.assembler.v6.base.option.masm.1375493128" name="Assembler syntax (-masm)" superClass="com.arm.tool.assembler.v6.base.option.masm" value="masm.val.auto" valueType="enumerated"/>
+                                								
+                                <inputType id="com.arm.tool.assembler.v6.base.input.1228944188" superClass="com.arm.tool.assembler.v6.base.input"/>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.arm.tool.c.linker.v6.base.var.arm_compiler_6-6.1010574911" name="Arm Linker 6" superClass="com.arm.tool.c.linker.v6.base.var.arm_compiler_6-6">
+                                								
+                                <option id="com.arm.tool.c.linker.option.entry.230263510" name="Image entry point (--entry)" superClass="com.arm.tool.c.linker.option.entry" value="Reset_Handler" valueType="string"/>
+                                								
+                                <option id="com.arm.tool.c.linker.option.scatter.960542604" name="Scatter file (--scatter)" superClass="com.arm.tool.c.linker.option.scatter" value="${workspace_loc:/${ProjName}}/cmsis_rte_STM32F407VGTx.sct" valueType="string"/>
+                                								
+                                <option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.arm.tool.c.linker.implicit.libs.190201736" name="Implicit other library files" superClass="com.arm.tool.c.linker.implicit.libs" valueType="libs">
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/LIB/ARM/RTX_CM4.lib&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/FileSystem/Lib/ARM/FS_LFN_CM3_L.lib&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Keil/MDK-Middleware/7.13.0/USB/Lib/ARM/USB_CM3_L.lib&quot;"/>
+                                    								
+                                </option>
+                                							
+                            </tool>
+                            							
+                            <tool id="com.arm.tool.librarian.v6.base.var.arm_compiler_6-6.1094452243" name="Arm Librarian 6" superClass="com.arm.tool.librarian.v6.base.var.arm_compiler_6-6"/>
+                            						
+                        </toolChain>
+                        					
+                    </folderInfo>
+                    					
+                    <sourceEntries>
+                        						
+                        <entry excluding="src/Thread_2.c|src/Thread_1.c" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+                        					
+                    </sourceEntries>
+                    				
+                </configuration>
+                			
+            </storageModule>
+            			
+            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+            		
+        </cconfiguration>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
+        		
+        <project id="TestCMSISArm6.com.arm.eclipse.build.project.v6.exe.base.var.arm_compiler_6-6.1104949331" name="Executable" projectType="com.arm.eclipse.build.project.v6.exe.base.var.arm_compiler_6-6"/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="scannerConfiguration">
+        		
+        <autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+    	
+    <storageModule moduleId="com.arm.projectSettings" version="6.0.0"/>
+    	
+    <storageModule moduleId="refreshScope"/>
+    	
+    <storageModule moduleId="com.arm.cmsis.project">
+        		
+        <rteConfig name="BaseProject_2021_07_30.rteconfig"/>
+        		
+        <toolChainAdapter id="com.arm.cmsis.pack.build.armcc5.Armcc5ToolChainAdapter" name="Adapter for ARM C/C++ 5.x and 6.x toolchains"/>
+        		
+        <device Dclock="168000000" Dcore="Cortex-M4" DcoreVersion="r0p1" Dendian="Little-endian" Dfamily="STM32F4 Series" Dfpu="SP_FPU" Dmpu="MPU" Dname="STM32F407VG" DsubFamily="STM32F407" Dvariant="STM32F407VGTx" Dvendor="STMicroelectronics:13" info="ARM , 192 KB RAM, 1 MB ROM" url="https://www.keil.com/dd2/st/stm32f407vgtx"/>
+        		
+        <files>
+            			
+            <file name="RTE/CMSIS/RTX_Conf_CM.c" version="4.70.1"/>
+            			
+            <file name="RTE/Device/STM32F407VGTx/RTE_Device.h" version="2.4.5"/>
+            			
+            <file name="RTE/Device/STM32F407VGTx/startup_stm32f407xx.s" version="2.6.2"/>
+            			
+            <file name="RTE/Device/STM32F407VGTx/stm32f4xx_hal_conf.h" version="1.7.9"/>
+            			
+            <file name="RTE/Device/STM32F407VGTx/system_stm32f4xx.c" version="2.6.2"/>
+            			
+            <file name="RTE/File_System/FS_Config.c" version="6.3.0"/>
+            			
+            <file name="RTE/File_System/FS_Config_USB_0.h" version="6.2.0"/>
+            			
+            <file name="RTE/STM32F405_415_407_417_427_437_429_439.dbgconf" version="2.15.0"/>
+            			
+            <file name="RTE/USB/USBH_Config_0.c" version="5.2.1"/>
+            			
+            <file name="RTE/USB/USBH_Config_MSC.h" version="5.0.0"/>
+            		
+        </files>
+        	
+    </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+    
+</cproject>
