@@ -11,7 +11,7 @@ src/Thread.o: ..\src\Thread.c \
   C:\Program\ Files\Arm\Development\ Studio\ 2021.1\sw\ARMCompiler6.16\bin\..\include\stdbool.h \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB\Include\rl_usb.h \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB\Include\usb_os.h \
-  C:\Users\Josiah\ Ferguson\Development\ Studio\ Workspace\Project\RTE\RTE_Components.h \
+  C:\Users\Josiah\ Ferguson\git\repository\project\Project\RTE\RTE_Components.h \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB\Include\usb_compiler.h \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h \
@@ -110,7 +110,7 @@ C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB
 
 C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB\Include\usb_os.h:
 
-C:\Users\Josiah\ Ferguson\Development\ Studio\ Workspace\Project\RTE\RTE_Components.h:
+C:\Users\Josiah\ Ferguson\git\repository\project\Project\RTE\RTE_Components.h:
 
 C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB\Include\usb_compiler.h:
 

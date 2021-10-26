@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.arm.debug.cmsis.launch">
     <mapAttribute key="AverageDurationTracker">
-        <mapEntry key="*Fetching Data Model" value="484549"/>
-        <mapEntry key="*list global low level symbols" value="7214110"/>
+        <mapEntry key="*Fetching Data Model" value="376384"/>
+        <mapEntry key="*list global low level symbols" value="6132533"/>
         <mapEntry key="*loading values from target" value="20252345"/>
         <mapEntry key="*updating registers" value="96402600"/>
         <mapEntry key="*updating variables" value="2343166"/>
-        <mapEntry key="AddEventObserver" value="589401"/>
+        <mapEntry key="AddEventObserver" value="454987"/>
         <mapEntry key="Evaluate" value="456175"/>
         <mapEntry key="Retrieving globals list" value="4223615"/>
         <mapEntry key="break" value="3435420"/>
-        <mapEntry key="compute execution mode" value="727257"/>
-        <mapEntry key="continue" value="9801980"/>
+        <mapEntry key="compute execution mode" value="347979"/>
+        <mapEntry key="continue" value="9238337"/>
         <mapEntry key="core" value="827537"/>
         <mapEntry key="disassemble" value="100429500"/>
-        <mapEntry key="file" value="154413652"/>
+        <mapEntry key="file" value="143617297"/>
         <mapEntry key="finish" value="11600145301"/>
-        <mapEntry key="get capabilities" value="258597"/>
-        <mapEntry key="get execution addresss" value="1041115"/>
-        <mapEntry key="get source lines" value="544154"/>
-        <mapEntry key="initialize command help" value="33836302"/>
+        <mapEntry key="get capabilities" value="219068"/>
+        <mapEntry key="get execution addresss" value="630456"/>
+        <mapEntry key="get source lines" value="666197"/>
+        <mapEntry key="initialize command help" value="33112025"/>
         <mapEntry key="interrupt" value="28805770"/>
-        <mapEntry key="list breakpoint options" value="222585"/>
-        <mapEntry key="list breakpoints" value="278275"/>
-        <mapEntry key="list instruction sets" value="335635"/>
-        <mapEntry key="list signals" value="676616"/>
-        <mapEntry key="list watchpoint options" value="862751"/>
-        <mapEntry key="list watchpoints" value="290784"/>
-        <mapEntry key="load" value="5064330"/>
+        <mapEntry key="list breakpoint options" value="152158"/>
+        <mapEntry key="list breakpoints" value="295792"/>
+        <mapEntry key="list instruction sets" value="237533"/>
+        <mapEntry key="list signals" value="403426"/>
+        <mapEntry key="list watchpoint options" value="655465"/>
+        <mapEntry key="list watchpoints" value="259930"/>
+        <mapEntry key="load" value="4168776"/>
         <mapEntry key="next" value="58912253"/>
         <mapEntry key="reload-symbol-file" value="37441500"/>
         <mapEntry key="remove" value="2738647"/>
-        <mapEntry key="run script" value="11877095007"/>
-        <mapEntry key="set CWD" value="2021223"/>
+        <mapEntry key="run script" value="20247575681"/>
+        <mapEntry key="set CWD" value="1408032"/>
         <mapEntry key="set breakpoint properties" value="4333814"/>
-        <mapEntry key="set debug-from" value="933421"/>
-        <mapEntry key="start" value="229236892"/>
+        <mapEntry key="set debug-from" value="1252263"/>
+        <mapEntry key="start" value="214095205"/>
         <mapEntry key="step" value="69141000"/>
-        <mapEntry key="target reset" value="15563703"/>
+        <mapEntry key="target reset" value="15336095"/>
         <mapEntry key="toggleBreakpoint" value="3799389"/>
-        <mapEntry key="waitForTargetToStop" value="25287537"/>
+        <mapEntry key="waitForTargetToStop" value="20210721"/>
     </mapAttribute>
     <stringAttribute key="CLOCK_SPEED" value="10MHz"/>
     <stringAttribute key="CMSIS_DCORE" value="Cortex-M4"/>
@@ -81,7 +81,7 @@
         <mapEntry key="CMSIS_FLASH_ALG_2_REGION_START" value="536854528"/>
     </mapAttribute>
     <booleanAttribute key="CMSIS_FLASH_AS_CONNECT" value="true"/>
-    <booleanAttribute key="CMSIS_FLASH_SUPRESS" value="true"/>
+    <booleanAttribute key="CMSIS_FLASH_SUPRESS" value="false"/>
     <booleanAttribute key="CMSIS_LOAD_SYMBOLS_ONLY" value="false"/>
     <stringAttribute key="CMSIS_PACK_NAME" value="STM32F4xx_DFP_STM32F407VGTx"/>
     <stringAttribute key="CMSIS_PACK_VERSION" value="2.15.0"/>

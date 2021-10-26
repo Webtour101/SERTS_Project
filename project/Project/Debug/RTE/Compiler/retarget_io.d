@@ -6,7 +6,7 @@ RTE/Compiler/retarget_io.o: \
   C:\Program\ Files\Arm\Development\ Studio\ 2021.1\sw\ARMCompiler6.16\bin\..\include\stdlib.h \
   C:\Program\ Files\Arm\Development\ Studio\ 2021.1\sw\ARMCompiler6.16\bin\..\include\assert.h \
   C:\Program\ Files\Arm\Development\ Studio\ 2021.1\sw\ARMCompiler6.16\bin\..\include\rt_sys.h \
-  C:\Users\Josiah\ Ferguson\Development\ Studio\ Workspace\Project\RTE\RTE_Components.h \
+  C:\Users\Josiah\ Ferguson\git\repository\project\Project\RTE\RTE_Components.h \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\FileSystem\Include\rl_fs_lib.h \
   C:\Program\ Files\Arm\Development\ Studio\ 2021.1\sw\ARMCompiler6.16\bin\..\include\stdarg.h \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\FileSystem\Include\rl_fs.h \
@@ -24,7 +24,7 @@ C:\Program\ Files\Arm\Development\ Studio\ 2021.1\sw\ARMCompiler6.16\bin\..\incl
 
 C:\Program\ Files\Arm\Development\ Studio\ 2021.1\sw\ARMCompiler6.16\bin\..\include\rt_sys.h:
 
-C:\Users\Josiah\ Ferguson\Development\ Studio\ Workspace\Project\RTE\RTE_Components.h:
+C:\Users\Josiah\ Ferguson\git\repository\project\Project\RTE\RTE_Components.h:
 
 C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\FileSystem\Include\rl_fs_lib.h:
 

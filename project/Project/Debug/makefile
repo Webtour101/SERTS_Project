@@ -33,10 +33,10 @@ endif
 all: Project.axf
 
 # Tool invocations
-Project.axf: $(OBJS) C:\Users\Josiah\ Ferguson\Development\ Studio\ Workspace\Project/cmsis_rte_STM32F407VGTx.sct $(USER_OBJS) $(LIBS)
+Project.axf: $(OBJS) C:\Users\Josiah\ Ferguson\git\repository\project\Project/cmsis_rte_STM32F407VGTx.sct $(USER_OBJS) $(LIBS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Arm Linker 6'
-	armlink.exe --entry=Reset_Handler --scatter="C:\Users\Josiah Ferguson\Development Studio Workspace\Project/cmsis_rte_STM32F407VGTx.sct" --info=sizes -o "Project.axf" $(OBJS) $(USER_OBJS) "C:/Users/Josiah Ferguson/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/LIB/ARM/RTX_CM4.lib" "C:/Users/Josiah Ferguson/AppData/Local/Arm/Packs/Keil/MDK-Middleware/7.13.0/FileSystem/Lib/ARM/FS_LFN_CM3_L.lib" "C:/Users/Josiah Ferguson/AppData/Local/Arm/Packs/Keil/MDK-Middleware/7.13.0/USB/Lib/ARM/USB_CM3_L.lib" "C:/Users/Josiah Ferguson/Development Studio Workspace/Project/src/libPDMFilter_CM4_Keil.lib"
+	armlink.exe --entry=Reset_Handler --scatter="C:\Users\Josiah Ferguson\git\repository\project\Project/cmsis_rte_STM32F407VGTx.sct" --info=sizes -o "Project.axf" $(OBJS) $(USER_OBJS) "C:/Users/Josiah Ferguson/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/RTOS/RTX/LIB/ARM/RTX_CM4.lib" "C:/Users/Josiah Ferguson/AppData/Local/Arm/Packs/Keil/MDK-Middleware/7.13.0/FileSystem/Lib/ARM/FS_LFN_CM3_L.lib" "C:/Users/Josiah Ferguson/AppData/Local/Arm/Packs/Keil/MDK-Middleware/7.13.0/USB/Lib/ARM/USB_CM3_L.lib" "C:/Users/Josiah Ferguson/git/repository/project/Project/src/libPDMFilter_CM4_Keil.lib"
 	@echo 'Finished building target: $@'
 	@echo ' '
 

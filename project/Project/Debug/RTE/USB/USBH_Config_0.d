@@ -1,6 +1,6 @@
 RTE/USB/USBH_Config_0.o: ..\RTE\USB\USBH_Config_0.c \
-  C:\Users\Josiah\ Ferguson\Development\ Studio\ Workspace\Project\RTE\RTE_Components.h \
-  C:\Users\Josiah\ Ferguson\Development\ Studio\ Workspace\Project\RTE\USB\USBH_Config_MSC.h \
+  C:\Users\Josiah\ Ferguson\git\repository\project\Project\RTE\RTE_Components.h \
+  C:\Users\Josiah\ Ferguson\git\repository\project\Project\RTE\USB\USBH_Config_MSC.h \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB\Include\usbh_config.h \
   C:\Program\ Files\Arm\Development\ Studio\ 2021.1\sw\ARMCompiler6.16\bin\..\include\stdint.h \
   C:\Program\ Files\Arm\Development\ Studio\ 2021.1\sw\ARMCompiler6.16\bin\..\include\stdbool.h \
@@ -28,9 +28,9 @@ RTE/USB/USBH_Config_0.o: ..\RTE\USB\USBH_Config_0.c \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB\Include\usbh_config_hc_0.c \
   C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB\Include\usbh_cmsis_rtos1.c
 
-C:\Users\Josiah\ Ferguson\Development\ Studio\ Workspace\Project\RTE\RTE_Components.h:
+C:\Users\Josiah\ Ferguson\git\repository\project\Project\RTE\RTE_Components.h:
 
-C:\Users\Josiah\ Ferguson\Development\ Studio\ Workspace\Project\RTE\USB\USBH_Config_MSC.h:
+C:\Users\Josiah\ Ferguson\git\repository\project\Project\RTE\USB\USBH_Config_MSC.h:
 
 C:\Users\Josiah\ Ferguson\AppData\Local\Arm\Packs\Keil\MDK-Middleware\7.13.0\USB\Include\usbh_config.h:
 
