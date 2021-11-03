@@ -70,10 +70,14 @@ enum commands{
   ListFiles,
   SendComplete,
   SendFiles,
-  StoppedPlay,
-  PausedPlay,
-  Play_File,
-  PlayingFile
+  //StoppedPlay,
+  //PausedPlay,
+  PlaySong_Action,
+  ResumeSong_Action,
+  PauseSong_Action,
+  StopSong_Action
+  //Play_File,
+  //ResumeFile
 };
 
 // State Machine definitions
@@ -144,14 +148,14 @@ void Process_Event(uint16_t event)
           LED_On(LED_Blue);                                                        	// Entry Action
           osMessagePut(mid_Command_FSQueue, SendFiles, osWaitForever);             	// Send ListFiles message via Queue
       }
-      if(event == Play_File)
+      if(event == PlaySong_Action)
       {
     	  Current_State = Play_State;
     	  LED_Off(LED_Blue);
     	  LED_Off(LED_Green);
     	  LED_Off(LED_Red);
     	  LED_On(LED_Orange);
-    	  osMessagePut(mid_Command_FSQueue, PlayingFile, osWaitForever);
+    	  osMessagePut(mid_Command_FSQueue, PlaySong_Action, osWaitForever);
       }
       break;
 
@@ -170,23 +174,23 @@ void Process_Event(uint16_t event)
 
     case Play_State:
 
-    	if(event == StoppedPlay)
+    	if(event == StopSong_Action)
     	{
     		Current_State = Stopped_State;                                               // Goes to next state
     		LED_Off(LED_Blue);                                                	// Exit action
     		LED_On(LED_Red);
     		LED_Off(LED_Orange);
     		LED_Off(LED_Green);
-    		osMessagePut(mid_Command_FSQueue, StoppedPlay, osWaitForever);
+    		osMessagePut(mid_Command_FSQueue, StopSong_Action, osWaitForever);
     	}
-    	if(event == PausedPlay)
+    	if(event == PauseSong_Action)
     	{
     		Current_State = Paused_State;
     		LED_Off(LED_Blue);                                                	// Exit action
     		LED_On(LED_Red);
     		LED_On(LED_Orange);
     		LED_Off(LED_Green);
-    	    osMessagePut(mid_Command_FSQueue, PausedPlay, osWaitForever);
+    	    osMessagePut(mid_Command_FSQueue, PauseSong_Action, osWaitForever);
     	}
     	break;
 
@@ -201,16 +205,16 @@ void Process_Event(uint16_t event)
 
     case Paused_State:
 
-    	if(event == Play_File)
+    	if(event == PlaySong_Action)
     	{
     	   	  Current_State = Play_State;
     	   	  LED_Off(LED_Blue);
     	   	  LED_Off(LED_Green);
     	   	  LED_Off(LED_Red);
     	   	  LED_On(LED_Orange);
-    	   	  osMessagePut(mid_Command_FSQueue, PlayingFile, osWaitForever);
+    	   	  osMessagePut(mid_Command_FSQueue, ResumeSong_Action, osWaitForever);
     	}
-    	if(event == StoppedPlay)
+    	if(event == StopSong_Action)
     	{
     		//close file
     		Current_State = Idle;
@@ -291,16 +295,16 @@ void Rx_Command (void const *argument)
       {
     	  UART_receivestring(name,80);
     	  selected_FileID = name;
-    	  osMessagePut (mid_CMDQueue, Play_File, osWaitForever);
+    	  osMessagePut (mid_CMDQueue, PlaySong_Action, osWaitForever);
     	  rx_char[1] = 0;
       }
       if(!strcmp(rx_char,Stop_File_char))
       {
-    	  osMessagePut (mid_CMDQueue, StoppedPlay, osWaitForever);
+    	  osMessagePut (mid_CMDQueue, StopSong_Action, osWaitForever);
       }
       if(!strcmp(rx_char,Pause_File_char))
       {
-    	  osMessagePut (mid_CMDQueue, PausedPlay, osWaitForever);
+    	  osMessagePut (mid_CMDQueue, PauseSong_Action, osWaitForever);
       }
    }
 } // end Rx_Command
@@ -315,170 +319,143 @@ void Rx_Command (void const *argument)
 void FS(void const *arg)
 {
   osEvent evt; 																		// Receive message object
-
+  int read_amnt;
 //Setting up and mounting the USB
-	   usbStatus ustatus; 															// USB driver status variable
-	   uint8_t drivenum = 0; 														// Using U0: drive number
-	   char *drive_name = "U0:"; 													// USB drive name
+  usbStatus ustatus; 															// USB driver status variable
+  uint8_t drivenum = 0; 														// Using U0: drive number
+  char *drive_name = "U0:"; 													// USB drive name
 
-	   fsStatus fstatus; 															// file system status variable
-	   fsFileInfo info;
-		WAVHEADER header;
-		size_t rd;
-		uint32_t i;
-		static uint8_t rtrn = 0;
-		uint8_t rdnum = 1; // read buffer number
+  fsStatus fstatus; 															// file system status variable
+  fsFileInfo info;
+  WAVHEADER header;
+  size_t rd;
+  uint32_t i;
+  static uint8_t rtrn = 0;
+  uint8_t rdnum = 1; // read buffer number
 
-		// initialize the audio output
-		rtrn = BSP_AUDIO_OUT_Init(OUTPUT_DEVICE_AUTO, 0x49, 44100);
-		if (rtrn != AUDIO_OK)return;
+  // initialize the audio output
+  rtrn = BSP_AUDIO_OUT_Init(OUTPUT_DEVICE_AUTO, 0x49, 44100);
+  if (rtrn != AUDIO_OK)return;
 
-	   LED_On(LED_Green);
-	   ustatus = USBH_Initialize (drivenum); 										// initialize the USB Host
-	   if (ustatus == usbOK)														// loop until the device is OK, may be delay from Initialize
-	   {
-		   ustatus = USBH_Device_GetStatus (drivenum); 								// get the status of the USB device
-		   while(ustatus != usbOK)
-		   {
-			   ustatus = USBH_Device_GetStatus (drivenum); 							// get the status of the USB device
-		   }
-	   // initialize the drive
-		   fstatus = finit (drive_name);
-		   if (fstatus != fsOK)														// handle the error, finit didn't work
-		   {
-		   }
+  LED_On(LED_Green);
+  ustatus = USBH_Initialize (drivenum); 										// initialize the USB Host
+  if (ustatus == usbOK)														// loop until the device is OK, may be delay from Initialize
+  {
+	  ustatus = USBH_Device_GetStatus (drivenum); 								// get the status of the USB device
+	  while(ustatus != usbOK)
+	  {
+		  ustatus = USBH_Device_GetStatus (drivenum); 							// get the status of the USB device
+	  }
+	  // initialize the drive
+	  fstatus = finit (drive_name);
+	  if (fstatus != fsOK)														// handle the error, finit didn't work
+	  {
+	  }
 
-	   // Mount the drive
-		   fstatus = fmount (drive_name);
-		   if (fstatus != fsOK)														// handle the error, fmount didn't work
-		   {
-		   }
-	   }
+	  	  // Mount the drive
+	  fstatus = fmount (drive_name);
+	  if (fstatus != fsOK)														// handle the error, fmount didn't work
+	  {
+	  }
+  }
 
-	while(1)
-	{
-    evt = osMessageGet (mid_Command_FSQueue, osWaitForever); 						// wait for message
-		if (evt.status == osEventMessage) 											// check for valid message
-		{
+  while(1)
+  {
+	  evt = osMessageGet (mid_Command_FSQueue, osWaitForever); 						// wait for message
+	  if (evt.status == osEventMessage) 											// check for valid message
+	  {
+		  switch(mid_Command_FSQueue)/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		  {
+		  	  // Change to case statement
+		  	  if( evt.value.v == SendFiles)
+		  	  {
+		  		  // Sending start of the file
+		  		  char *StartFileList_msg = "2\n";
+		  		  char *EndFileList_msg = "3\n";
+		  		  UART_send(StartFileList_msg,2); 									// Send start string
 
-			// Change to case statement
-			if( evt.value.v == SendFiles)
-			{
-				// Sending start of the file
-				char *StartFileList_msg = "2\n";
-				char *EndFileList_msg = "3\n";
-				UART_send(StartFileList_msg,2); 									// Send start string
+		  		  // Sending the file names on the USB
+		  		  info.fileID = 0;
 
-				// Sending the file names on the USB
-				info.fileID = 0;
+		  		  while (ffind ("U0:*.*", &info) == fsOK)
+		  		  {
+		  			  if (info.fileID != 4)
+		  			  {
+		  				  UART_send(info.name, strlen(info.name));
+		  				  UART_send("\n",1);
+		  			  }
+		  		  }
 
-				while (ffind ("U0:*.*", &info) == fsOK)
-				{
-					if (info.fileID != 4)
-					{
-						UART_send(info.name, strlen(info.name));
-						UART_send("\n",1);
-					}
-				}
+		  		  //Sending the end of the file
+		  		  UART_send(EndFileList_msg,2); 										// Send start string
 
-				//Sending the end of the file
-				UART_send(EndFileList_msg,2); 										// Send start string
-
-				osMessagePut (mid_CMDQueue, SendComplete, osWaitForever);
-			}
-		}
-
-
-
-
+		  		  osMessagePut (mid_CMDQueue, SendComplete, osWaitForever);
+		  	  }
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		case PlaySong_Action:
-			file_Selected = fopen (selected_FileID,"r");// open a file on the USB device
+			  case PlaySong_Action:
 
-			fread((void *)&header, sizeof(header), 1, file_Selected);
-			fread((void *) Audio_Buffer1, sizeof(Audio_Buffer1), 1, file_Selected);
+				  file_Selected = fopen (selected_FileID,"r");// open a file on the USB device
 
-			BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
+				  fread((void *)&header, sizeof(header), 1, file_Selected);
+				  read_amnt = fread((void *) Audio_Buffer1, 1, sizeof(Audio_Buffer1), file_Selected);
 
-			BSP_AUDIO_OUT_Play((uint16_t *)Audio_Buffer1, BUF_LEN*2);
+				  BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
+
+				  BSP_AUDIO_OUT_Play((uint16_t *)Audio_Buffer1, BUF_LEN*2);
 
 
-		case ResumeSong_Action:
-			if we are not at the beginning of a song play
-				if(ResumeSong_Action command received)
-				{
-					BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
-					BSP_AUDIO_OUT_ChangeBuffer((uint16_t*)Audio_Buffer1, BUF_LEN);
-				}
-			 	while(the read buffer length is BUF_LEN from previous read)
-			 	{
-			 		Read new buffer of data and send to DMA
-					Read a new message WITH ZERO DELAY
-					if (message received)
-					{ // check for valid message
-						if(message is PauseSong_Action)
-						{
-							BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
-							break; // This is not good programming but works
-						}
-						if(message is StopSong_Action)
-						{
-							set the read buffer length to zero; // this will stop all playback
-						}
-					} // end new message
-			 		if(read amount is <BUF_LEN)
-			 		{
-			 			end of song
-						Send SongDone to state machine
-						BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
-			 			fclose (f); // close the file
-			 		}
-			 	}// end while(the read buffer length is BUF_LEN from previous read)
-			break;
+			  case ResumeSong_Action:
+				  if(osMessageGet (mid_Command_FSQueue, osWaitForever) == 'ResumeSong_Action') //////////////////////////////////////////////////////////////////////////////////////////////////////
+				  {
+					  BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
+					  BSP_AUDIO_OUT_ChangeBuffer((uint16_t*)Audio_Buffer1, BUF_LEN);
+				  }
+				  while (read_amnt == sizeof(Audio_Buffer1))
+				  {
+					  //Writing Data to buffer 2
+					  fread((void *) Audio_Buffer2, sizeof(Audio_Buffer2), 1, file_Selected);; 					// Left channel
+					  //Send Buffer2 to DMA send through a queue
+					  osMessagePut(mid_COMDQueue, 2, osWaitForever);
+					  osSemaphoreWait(Sema_ID, osWaitForever);
+
+					  //Writing Data to buffer 1
+					  fread((void *) Audio_Buffer1, sizeof(Audio_Buffer1), 1, file_Selected);
+					  BSP_AUDIO_OUT_Play((uint16_t *)Audio_Buffer1, BUF_LEN*2);
+					  //Send Buffer1 to DMA send through a queue
+					  osMessagePut(mid_COMDQueue, 1, osWaitForever);
+					  osSemaphoreWait(Sema_ID, osWaitForever);
+
+					  evt = osMessageGet (mid_Command_FSQueue, 0);
+					  if (evt.value.v == PauseSong_Action || evt.value.v == StopSong_Action)
+					  { // check for valid message
+						  if(evt.value.v == PauseSong_Action)
+						  {
+							  BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
+							  break; // This is not good programming but works
+						  }
+						  if(evt.value.v == StopSong_Action)
+						  {
+							  read_amnt = 0; // this will stop all playback
+						  }
+					  }
+
+					  if(read_amnt < sizeof(Audio_Buffer1))
+					  {
+						  //end of song
+						  osMessagePut (mid_CMDQueue, StopSong_Action, osWaitForever);
+						  BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
+						  fclose (file_Selected); // close the file
+					  }
+				  }// end while(the read buffer length is BUF_LEN from previous read)
+				  break;
+		  } // End of Switch
+	  } // End of If
+  } // End of While
+} // End of FS
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-		// Case for play state
-
-		if (file_Selected != NULL)
-			{
-
-
-
-				// Case for resume
-				while(!feof(file_Selected))
-				{
-
-					//Writing Data to buffer 2
-					fread((void *) Audio_Buffer2, sizeof(Audio_Buffer2), 1, file_Selected);; 					// Left channel
-
-					//Send Buffer2 to DMA send through a queue
-					osMessagePut(mid_COMDQueue, 2, osWaitForever);
-					osSemaphoreWait(Sema_ID, osWaitForever);
-
-					//Writing Data to buffer 1
-					fread((void *) Audio_Buffer1, sizeof(Audio_Buffer1), 1, file_Selected);
-					BSP_AUDIO_OUT_Play((uint16_t *)Audio_Buffer1, BUF_LEN*2);
-					//Send Buffer1 to DMA send through a queue
-					osMessagePut(mid_COMDQueue, 1, osWaitForever);
-					osSemaphoreWait(Sema_ID, osWaitForever);
-				}
-
-				BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
-				fclose (file_Selected); // close the file
-				//selected_FileID = NULL;
-
-			}// end if file opened
-		}
-		osMessagePut (mid_CMDQueue, StoppedPlay, osWaitForever);
-
-}
-
 
 
 /* User Callbacks: user has to implement these functions if they are needed. */
