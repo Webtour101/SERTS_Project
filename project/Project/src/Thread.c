@@ -330,8 +330,8 @@ void FS(void const *arg)
 		uint8_t rdnum = 1; // read buffer number
 
 		// initialize the audio output
-								rtrn = BSP_AUDIO_OUT_Init(OUTPUT_DEVICE_AUTO, 0x49, 44100);
-								if (rtrn != AUDIO_OK)return;
+		rtrn = BSP_AUDIO_OUT_Init(OUTPUT_DEVICE_AUTO, 0x49, 44100);
+		if (rtrn != AUDIO_OK)return;
 
 	   LED_On(LED_Green);
 	   ustatus = USBH_Initialize (drivenum); 										// initialize the USB Host
@@ -395,44 +395,48 @@ void FS(void const *arg)
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 		case PlaySong_Action:
-			//Open the song file
-			//Read a buffer of data
-			//BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
-			//// Start playing the buffer
-			//BSP_AUDIO_OUT_Play function to start playing
-			//// NOTE: No break here so it will continue with the next sections too
+			file_Selected = fopen (selected_FileID,"r");// open a file on the USB device
+
+			fread((void *)&header, sizeof(header), 1, file_Selected);
+			fread((void *) Audio_Buffer1, sizeof(Audio_Buffer1), 1, file_Selected);
+
+			BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
+
+			BSP_AUDIO_OUT_Play((uint16_t *)Audio_Buffer1, BUF_LEN*2);
+
+
 		case ResumeSong_Action:
-			//// if we are not at the beginning of a song play
-			//if(ResumeSong_Action command received)
-			//{
-				//BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
-				//BSP_AUDIO_OUT_ChangeBuffer((uint16_t*)Audio_Buffer1, BUF_LEN);
-			//}
-		while(the read buffer length is BUF_LEN from previous read)
-		//{
-			//Read new buffer of data and send to DMA
-			//Read a new message WITH ZERO DELAY
-			//if (message received)
-			//{ // check for valid message
-				//if(message is PauseSong_Action)
-				//{
-					//BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
-					//break; // This is not good programming but works
-				//}
-				//if(message is StopSong_Action)
-				//{
-					//the read buffer length to zero; // this will stop all playback
-				//}
-			//} // end new message
-			//if(read amount is <BUF_LEN)
-			//{
-				// end of song
-				//Send SongDone to state machine
-				//BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
-				//fclose (f); // close the file
-			//}
-		//}// end while(the read buffer length is BUF_LEN from previous read)
-		break;
+			if we are not at the beginning of a song play
+				if(ResumeSong_Action command received)
+				{
+					BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_OFF);
+					BSP_AUDIO_OUT_ChangeBuffer((uint16_t*)Audio_Buffer1, BUF_LEN);
+				}
+			 	while(the read buffer length is BUF_LEN from previous read)
+			 	{
+			 		Read new buffer of data and send to DMA
+					Read a new message WITH ZERO DELAY
+					if (message received)
+					{ // check for valid message
+						if(message is PauseSong_Action)
+						{
+							BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
+							break; // This is not good programming but works
+						}
+						if(message is StopSong_Action)
+						{
+							set the read buffer length to zero; // this will stop all playback
+						}
+					} // end new message
+			 		if(read amount is <BUF_LEN)
+			 		{
+			 			end of song
+						Send SongDone to state machine
+						BSP_AUDIO_OUT_SetMute(AUDIO_MUTE_ON);
+			 			fclose (f); // close the file
+			 		}
+			 	}// end while(the read buffer length is BUF_LEN from previous read)
+			break;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -440,15 +444,11 @@ void FS(void const *arg)
 
 
 		// Case for play state
-		file_Selected = fopen (selected_FileID,"r");// open a file on the USB device
+
 		if (file_Selected != NULL)
 			{
-				fread((void *)&header, sizeof(header), 1, file_Selected);
 
 
-
-				fread((void *) Audio_Buffer1, sizeof(Audio_Buffer1), 1, file_Selected);
-				BSP_AUDIO_OUT_Play((uint16_t *)Audio_Buffer1, BUF_LEN*2);
 
 				// Case for resume
 				while(!feof(file_Selected))
@@ -521,3 +521,4 @@ void BSP_AUDIO_OUT_Error_CallBack(void)
 
 	}
 }
+
